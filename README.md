@@ -23,7 +23,8 @@ Cada amostra coletada é associada ao estímulo mais próximo e salva contendo:
 
 Esses dados podem ser baixados em JSON e analisados diretamente no Streamlit.
 
-O vídeo explicativo do projeto pode ser encontrado em ``https://youtu.be/nhFCPyoFcq8``
+### Vídeo
+O vídeo explicativo do projeto pode ser encontrado em <a href="https://youtu.be/nhFCPyoFcq8">vídeo</a>
 
 ---
 
