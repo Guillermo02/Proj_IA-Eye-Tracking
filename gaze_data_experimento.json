@@ -1,0 +1,1682 @@
+[
+  {
+    "x": 499.4196388319454,
+    "y": 499.8097615746451,
+    "timestamp": 36.6000000089407,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 495.95405605127775,
+    "y": 498.00913259605966,
+    "timestamp": 5686,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 482.0865979571085,
+    "y": 490.9333282657413,
+    "timestamp": 5767.600000008941,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 462.11814040846593,
+    "y": 483.6846893274745,
+    "timestamp": 5868.600000008941,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 435.8183304874101,
+    "y": 463.3966686878809,
+    "timestamp": 5968.100000008941,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 445.13127250527697,
+    "y": 414.24986858752726,
+    "timestamp": 6034.9000000059605,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 379.92119847262154,
+    "y": 367.0469567471927,
+    "timestamp": 6127.4000000059605,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 250.27893603692712,
+    "y": 324.29268189481,
+    "timestamp": 6190.70000000298,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 36.170392570761805,
+    "y": 293.85457906919265,
+    "timestamp": 6266.100000008941,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 26.860199827998954,
+    "y": 259.4688233688501,
+    "timestamp": 6334.79999999702,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": -5.120875818756986,
+    "y": 161.6581968382323,
+    "timestamp": 6415.79999999702,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": -139.43259815654386,
+    "y": 72.8198957889469,
+    "timestamp": 6503.5,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": -169.66632495582581,
+    "y": 62.96290127238011,
+    "timestamp": 6583.4000000059605,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": -98.61985712545152,
+    "y": 52.91467287400487,
+    "timestamp": 6656.4000000059605,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": -108.88193990445615,
+    "y": 90.34733105110342,
+    "timestamp": 6729.9000000059605,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": -102.21251700850519,
+    "y": 58.90999977021597,
+    "timestamp": 6804.29999999702,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": -117.48612242861574,
+    "y": 92.28225296050411,
+    "timestamp": 6877.79999999702,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 50.85293290132009,
+    "y": 90.26358313106157,
+    "timestamp": 6957.9000000059605,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 86.04301622328754,
+    "y": 119.0171143931343,
+    "timestamp": 7024.70000000298,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 112.99410942736151,
+    "y": 107.05747307732022,
+    "timestamp": 7088.29999999702,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 174.5755947266609,
+    "y": 135.48716182559497,
+    "timestamp": 7149.5,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 233.7162283286633,
+    "y": 145.25644206955448,
+    "timestamp": 7213.70000000298,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 288.0258060200548,
+    "y": 209.73093470384123,
+    "timestamp": 7300,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 547.5693912624963,
+    "y": 173.93503910758832,
+    "timestamp": 7381.79999999702,
+    "nearestStimulusId": 0,
+    "nearestStimulusColor": "cyan",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 635.110050584996,
+    "y": 188.95281877147778,
+    "timestamp": 7454.5,
+    "nearestStimulusId": 0,
+    "nearestStimulusColor": "cyan",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 682.9768179721556,
+    "y": 210.9682838444802,
+    "timestamp": 7530,
+    "nearestStimulusId": 0,
+    "nearestStimulusColor": "cyan",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 648.5188967000872,
+    "y": 204.9903461335924,
+    "timestamp": 7599.29999999702,
+    "nearestStimulusId": 0,
+    "nearestStimulusColor": "cyan",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 777.0566409459822,
+    "y": 226.905686984685,
+    "timestamp": 7671.79999999702,
+    "nearestStimulusId": 0,
+    "nearestStimulusColor": "cyan",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 808.7023114318883,
+    "y": 301.02224405917644,
+    "timestamp": 7752.70000000298,
+    "nearestStimulusId": 0,
+    "nearestStimulusColor": "cyan",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 814.6548369952283,
+    "y": 274.022431925067,
+    "timestamp": 7833,
+    "nearestStimulusId": 0,
+    "nearestStimulusColor": "cyan",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 807.3710812150869,
+    "y": 323.70939727903203,
+    "timestamp": 7920.100000008941,
+    "nearestStimulusId": 0,
+    "nearestStimulusColor": "cyan",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 773.9915483931173,
+    "y": 388.0585174256013,
+    "timestamp": 7998.79999999702,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 701.3217132649438,
+    "y": 401.1356430884942,
+    "timestamp": 8106.79999999702,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 690.7196019248842,
+    "y": 451.7323090745701,
+    "timestamp": 8197.29999999702,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 754.7585248740411,
+    "y": 456.6743832294719,
+    "timestamp": 8279.90000000596,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 751.8012184996593,
+    "y": 464.9848367951038,
+    "timestamp": 8371.79999999702,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 809.7987225730798,
+    "y": 463.4368643256551,
+    "timestamp": 8456.29999999702,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 858.7291127034433,
+    "y": 495.8971801636906,
+    "timestamp": 8543.5,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 798.9858407702193,
+    "y": 466.04605314120613,
+    "timestamp": 8627.70000000298,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 729.6245254767346,
+    "y": 457.30107610065113,
+    "timestamp": 8707.10000000894,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 783.6087783529687,
+    "y": 456.60792741718996,
+    "timestamp": 8806,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 746.7600627115222,
+    "y": 456.83405134284305,
+    "timestamp": 8895.40000000596,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 691.721997686079,
+    "y": 447.80012241329155,
+    "timestamp": 8985.60000000894,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 731.6506996273787,
+    "y": 463.73495790830873,
+    "timestamp": 9083.29999999702,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 748.8390236779875,
+    "y": 484.4076885261851,
+    "timestamp": 9156.90000000596,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 765.7930560812035,
+    "y": 469.3878259067273,
+    "timestamp": 9268.60000000894,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 841.4088550934689,
+    "y": 473.5048303744659,
+    "timestamp": 9342,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 848.3500231125558,
+    "y": 464.1835476493191,
+    "timestamp": 9423.40000000596,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 789.4334318720585,
+    "y": 474.59318891902495,
+    "timestamp": 9497.79999999702,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 802.4015851338968,
+    "y": 448.88027131288675,
+    "timestamp": 9580.70000000298,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 830.0816616316198,
+    "y": 431.0616259690876,
+    "timestamp": 9654.79999999702,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 875.86025714929,
+    "y": 379.88350593904414,
+    "timestamp": 9735.20000000298,
+    "nearestStimulusId": 1,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 907.8443438950976,
+    "y": 354.0281192541723,
+    "timestamp": 9814.60000000894,
+    "nearestStimulusId": 0,
+    "nearestStimulusColor": "cyan",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 911.7615214278668,
+    "y": 284.8150353265344,
+    "timestamp": 9886.79999999702,
+    "nearestStimulusId": 0,
+    "nearestStimulusColor": "cyan",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 934.9594189187649,
+    "y": 250.45441493927333,
+    "timestamp": 9964.40000000596,
+    "nearestStimulusId": 0,
+    "nearestStimulusColor": "cyan",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 883.1576600731202,
+    "y": 225.2124290744517,
+    "timestamp": 10038.10000000894,
+    "nearestStimulusId": 0,
+    "nearestStimulusColor": "cyan",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 841.0017622145831,
+    "y": 203.2296355357181,
+    "timestamp": 10121.90000000596,
+    "nearestStimulusId": 0,
+    "nearestStimulusColor": "cyan",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 857.3973600197108,
+    "y": 168.3450816226843,
+    "timestamp": 10198.29999999702,
+    "nearestStimulusId": 0,
+    "nearestStimulusColor": "cyan",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 867.0579939269685,
+    "y": 179.25913114074004,
+    "timestamp": 10284.20000000298,
+    "nearestStimulusId": 0,
+    "nearestStimulusColor": "cyan",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 891.1043970146643,
+    "y": 148.16414370021604,
+    "timestamp": 10376.40000000596,
+    "nearestStimulusId": 0,
+    "nearestStimulusColor": "cyan",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 909.7003526593827,
+    "y": 159.52756351637146,
+    "timestamp": 10468.90000000596,
+    "nearestStimulusId": 0,
+    "nearestStimulusColor": "cyan",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 852.8931554392075,
+    "y": 180.48055849844755,
+    "timestamp": 10555.40000000596,
+    "nearestStimulusId": 0,
+    "nearestStimulusColor": "cyan",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 850.3321942220961,
+    "y": 172.12694945157403,
+    "timestamp": 10633.5,
+    "nearestStimulusId": 0,
+    "nearestStimulusColor": "cyan",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 861.4750275647904,
+    "y": 162.04447901023028,
+    "timestamp": 10712.79999999702,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 875.1146202254062,
+    "y": 200.9643099669122,
+    "timestamp": 10798.10000000894,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 889.6045158128579,
+    "y": 201.96896912637948,
+    "timestamp": 10880,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 951.6946131575976,
+    "y": 200.5306135301056,
+    "timestamp": 10961,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 980.2289393925905,
+    "y": 218.1491616714341,
+    "timestamp": 11044.79999999702,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 1034.7384013651472,
+    "y": 221.0688767976168,
+    "timestamp": 11128,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 1087.5044743886995,
+    "y": 201.99792568190713,
+    "timestamp": 11206,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 1150.4219325282174,
+    "y": 212.61715857156224,
+    "timestamp": 11281.40000000596,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 1172.227086443673,
+    "y": 217.9334975894187,
+    "timestamp": 11356,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 1213.1570757400282,
+    "y": 235.2801408419329,
+    "timestamp": 11436.70000000298,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 1120.01521693312,
+    "y": 272.9702967040269,
+    "timestamp": 11508.90000000596,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 1009.5565341072734,
+    "y": 283.70342811379135,
+    "timestamp": 11583.10000000894,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 983.5905251184834,
+    "y": 247.12174492404858,
+    "timestamp": 11656.79999999702,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 926.8445695715485,
+    "y": 240.4240405360321,
+    "timestamp": 11747.90000000596,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 901.0677721101716,
+    "y": 275.07889890149426,
+    "timestamp": 11828.29999999702,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 900.8558711721952,
+    "y": 297.3987150645085,
+    "timestamp": 11907.90000000596,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 898.1978222931455,
+    "y": 259.97607050088214,
+    "timestamp": 11980.79999999702,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 909.1307426703289,
+    "y": 219.3843870983917,
+    "timestamp": 12048.10000000894,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 865.9764583108494,
+    "y": 194.4085415115755,
+    "timestamp": 12125.70000000298,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 866.4708165547744,
+    "y": 199.90652692390788,
+    "timestamp": 12193.60000000894,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 869.306537438187,
+    "y": 178.77921397165505,
+    "timestamp": 12268.10000000894,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 749.5572692287992,
+    "y": 237.12494379534138,
+    "timestamp": 12350.40000000596,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 770.3218658733923,
+    "y": 259.9031480786902,
+    "timestamp": 12424.10000000894,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 781.7894916926134,
+    "y": 289.2692259567133,
+    "timestamp": 12501.5,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 790.3097287215717,
+    "y": 273.62930095160624,
+    "timestamp": 12586.90000000596,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 732.2015410153557,
+    "y": 239.99499792985029,
+    "timestamp": 12665.90000000596,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 827.750049880456,
+    "y": 257.69289086750916,
+    "timestamp": 12747.5,
+    "nearestStimulusId": 3,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 855.2754320196635,
+    "y": 262.6245461944932,
+    "timestamp": 12829.70000000298,
+    "nearestStimulusId": 3,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 935.5907114577733,
+    "y": 274.7109234427811,
+    "timestamp": 12906,
+    "nearestStimulusId": 3,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 995.9119277635815,
+    "y": 271.3674817039732,
+    "timestamp": 12991.79999999702,
+    "nearestStimulusId": 3,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 1010.7124144828279,
+    "y": 309.96811034966373,
+    "timestamp": 13070.70000000298,
+    "nearestStimulusId": 3,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 992.0680451161616,
+    "y": 336.71217377717886,
+    "timestamp": 13158.20000000298,
+    "nearestStimulusId": 3,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 977.0421299295624,
+    "y": 302.5194835969222,
+    "timestamp": 13253.70000000298,
+    "nearestStimulusId": 3,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 887.7642651033368,
+    "y": 274.5774510886325,
+    "timestamp": 13331.20000000298,
+    "nearestStimulusId": 3,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 860.4532045186957,
+    "y": 244.07727370095685,
+    "timestamp": 13413.60000000894,
+    "nearestStimulusId": 3,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 856.8813452798515,
+    "y": 267.4321172551713,
+    "timestamp": 13515.79999999702,
+    "nearestStimulusId": 3,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 819.4311996437306,
+    "y": 245.72958846428023,
+    "timestamp": 13617.29999999702,
+    "nearestStimulusId": 3,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 891.818414442904,
+    "y": 219.2660208308053,
+    "timestamp": 13722.10000000894,
+    "nearestStimulusId": 3,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 814.6762378607523,
+    "y": 248.51961587689945,
+    "timestamp": 13805.70000000298,
+    "nearestStimulusId": 3,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 793.5112230227793,
+    "y": 224.75173549572057,
+    "timestamp": 13884.10000000894,
+    "nearestStimulusId": 3,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 779.1111980549987,
+    "y": 230.4063085935297,
+    "timestamp": 13965.29999999702,
+    "nearestStimulusId": 3,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 759.1170412418301,
+    "y": 214.33188853736462,
+    "timestamp": 14040.10000000894,
+    "nearestStimulusId": 3,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 739.8944100482879,
+    "y": 247.65156075008397,
+    "timestamp": 14121.20000000298,
+    "nearestStimulusId": 3,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 768.820854023693,
+    "y": 272.92025730825225,
+    "timestamp": 14199,
+    "nearestStimulusId": 3,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 824.8952885374188,
+    "y": 294.0912292413652,
+    "timestamp": 14274.20000000298,
+    "nearestStimulusId": 3,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 840.4937956907032,
+    "y": 326.8001125828341,
+    "timestamp": 14347.70000000298,
+    "nearestStimulusId": 3,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 862.7359461948872,
+    "y": 331.86434331249956,
+    "timestamp": 14419.40000000596,
+    "nearestStimulusId": 3,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 906.3538716628324,
+    "y": 370.30744676786765,
+    "timestamp": 14503.90000000596,
+    "nearestStimulusId": 3,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 852.4076716851972,
+    "y": 382.5193237817282,
+    "timestamp": 14575.90000000596,
+    "nearestStimulusId": 4,
+    "nearestStimulusColor": "blue",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 889.7303218496794,
+    "y": 407.8050474210365,
+    "timestamp": 14654.10000000894,
+    "nearestStimulusId": 4,
+    "nearestStimulusColor": "blue",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 952.36447554879,
+    "y": 454.44491737200894,
+    "timestamp": 14727.79999999702,
+    "nearestStimulusId": 5,
+    "nearestStimulusColor": "green",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 939.8657955902705,
+    "y": 459.6321854077116,
+    "timestamp": 14810.40000000596,
+    "nearestStimulusId": 5,
+    "nearestStimulusColor": "green",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 962.0209015684932,
+    "y": 460.2017972315441,
+    "timestamp": 14889.10000000894,
+    "nearestStimulusId": 5,
+    "nearestStimulusColor": "green",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1050.2317422461829,
+    "y": 479.8721421259505,
+    "timestamp": 14968.29999999702,
+    "nearestStimulusId": 5,
+    "nearestStimulusColor": "green",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1113.80293204078,
+    "y": 481.52685464440526,
+    "timestamp": 15063.29999999702,
+    "nearestStimulusId": 5,
+    "nearestStimulusColor": "green",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1185.779717955383,
+    "y": 497.10758777396677,
+    "timestamp": 15153.79999999702,
+    "nearestStimulusId": 5,
+    "nearestStimulusColor": "green",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1184.4139171743132,
+    "y": 449.65415424675837,
+    "timestamp": 15240.20000000298,
+    "nearestStimulusId": 5,
+    "nearestStimulusColor": "green",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1165.015191021419,
+    "y": 415.58985419893514,
+    "timestamp": 15329.10000000894,
+    "nearestStimulusId": 5,
+    "nearestStimulusColor": "green",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1132.240504346748,
+    "y": 416.71967541097587,
+    "timestamp": 15418,
+    "nearestStimulusId": 5,
+    "nearestStimulusColor": "green",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1089.7328172895022,
+    "y": 396.6028593661026,
+    "timestamp": 15493.90000000596,
+    "nearestStimulusId": 5,
+    "nearestStimulusColor": "green",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1034.6665727127818,
+    "y": 397.1227297899561,
+    "timestamp": 15568.90000000596,
+    "nearestStimulusId": 5,
+    "nearestStimulusColor": "green",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1005.4901349316641,
+    "y": 441.685589210417,
+    "timestamp": 15659.90000000596,
+    "nearestStimulusId": 5,
+    "nearestStimulusColor": "green",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1018.9876256081735,
+    "y": 449.8099441711437,
+    "timestamp": 15734.70000000298,
+    "nearestStimulusId": 5,
+    "nearestStimulusColor": "green",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1023.3998913857301,
+    "y": 431.6491520606453,
+    "timestamp": 15813.5,
+    "nearestStimulusId": 5,
+    "nearestStimulusColor": "green",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1010.8422064505102,
+    "y": 455.19995816164186,
+    "timestamp": 15893.20000000298,
+    "nearestStimulusId": 5,
+    "nearestStimulusColor": "green",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1044.6994935413952,
+    "y": 442.09833191732366,
+    "timestamp": 15968.5,
+    "nearestStimulusId": 5,
+    "nearestStimulusColor": "green",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1061.3852312333404,
+    "y": 434.104358348969,
+    "timestamp": 16043.40000000596,
+    "nearestStimulusId": 5,
+    "nearestStimulusColor": "green",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1094.4988630932319,
+    "y": 433.1084604513494,
+    "timestamp": 16118.90000000596,
+    "nearestStimulusId": 5,
+    "nearestStimulusColor": "green",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1016.2163556801364,
+    "y": 456.0274911277567,
+    "timestamp": 16198.29999999702,
+    "nearestStimulusId": 5,
+    "nearestStimulusColor": "green",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 935.1335870459019,
+    "y": 438.31828720466905,
+    "timestamp": 16265.79999999702,
+    "nearestStimulusId": 5,
+    "nearestStimulusColor": "green",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 841.6201403538054,
+    "y": 463.15931454694703,
+    "timestamp": 16335.90000000596,
+    "nearestStimulusId": 4,
+    "nearestStimulusColor": "blue",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 671.5672037808217,
+    "y": 459.10142852052223,
+    "timestamp": 16407.90000000596,
+    "nearestStimulusId": 4,
+    "nearestStimulusColor": "blue",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 637.1919580361455,
+    "y": 456.2369196674015,
+    "timestamp": 16481.10000000894,
+    "nearestStimulusId": 4,
+    "nearestStimulusColor": "blue",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 646.226052345312,
+    "y": 454.5255124295578,
+    "timestamp": 16547.60000000894,
+    "nearestStimulusId": 4,
+    "nearestStimulusColor": "blue",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 645.5786376227267,
+    "y": 460.9583855435634,
+    "timestamp": 16632.29999999702,
+    "nearestStimulusId": 4,
+    "nearestStimulusColor": "blue",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 656.6864672772928,
+    "y": 486.4170574788359,
+    "timestamp": 16715.29999999702,
+    "nearestStimulusId": 4,
+    "nearestStimulusColor": "blue",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 625.5822629104987,
+    "y": 459.91584558231403,
+    "timestamp": 16788.40000000596,
+    "nearestStimulusId": 4,
+    "nearestStimulusColor": "blue",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 629.3000937358291,
+    "y": 431.5128820805881,
+    "timestamp": 16878.5,
+    "nearestStimulusId": 4,
+    "nearestStimulusColor": "blue",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 672.3844993859145,
+    "y": 458.57185673436015,
+    "timestamp": 16964.20000000298,
+    "nearestStimulusId": 4,
+    "nearestStimulusColor": "blue",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 633.2532791667913,
+    "y": 475.4310490074568,
+    "timestamp": 17047,
+    "nearestStimulusId": 4,
+    "nearestStimulusColor": "blue",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 583.583803272478,
+    "y": 422.9039111660464,
+    "timestamp": 17125.5,
+    "nearestStimulusId": 4,
+    "nearestStimulusColor": "blue",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 581.9406279680742,
+    "y": 430.9967395324888,
+    "timestamp": 17215.90000000596,
+    "nearestStimulusId": 4,
+    "nearestStimulusColor": "blue",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 618.8058547397939,
+    "y": 448.64535196312346,
+    "timestamp": 17312.20000000298,
+    "nearestStimulusId": 4,
+    "nearestStimulusColor": "blue",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 593.8479590811635,
+    "y": 417.1386047419723,
+    "timestamp": 17392.29999999702,
+    "nearestStimulusId": 4,
+    "nearestStimulusColor": "blue",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 623.2299341981136,
+    "y": 432.4831131170092,
+    "timestamp": 17490.70000000298,
+    "nearestStimulusId": 4,
+    "nearestStimulusColor": "blue",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 636.7648836976163,
+    "y": 424.0664835949469,
+    "timestamp": 17579.40000000596,
+    "nearestStimulusId": 4,
+    "nearestStimulusColor": "blue",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 667.790830966192,
+    "y": 433.32408211227795,
+    "timestamp": 17662.40000000596,
+    "nearestStimulusId": 4,
+    "nearestStimulusColor": "blue",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 753.136275334462,
+    "y": 441.23168192099206,
+    "timestamp": 17738.60000000894,
+    "nearestStimulusId": 4,
+    "nearestStimulusColor": "blue",
+    "nearestPosition": "baixo-esquerda"
+  },
+  {
+    "x": 772.0607758062051,
+    "y": 430.2539037539241,
+    "timestamp": 17815.60000000894,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 825.240939490703,
+    "y": 430.2931257874867,
+    "timestamp": 17882.5,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 827.6426029297082,
+    "y": 423.66411003316415,
+    "timestamp": 17949.20000000298,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 856.9043792994747,
+    "y": 369.9915957156445,
+    "timestamp": 18023.79999999702,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 883.1424392039946,
+    "y": 348.1358573364534,
+    "timestamp": 18100.29999999702,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 929.131976978729,
+    "y": 316.2524737762152,
+    "timestamp": 18182.29999999702,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 931.3456743262311,
+    "y": 285.4719107210768,
+    "timestamp": 18254.5,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 943.5557160993162,
+    "y": 275.3401905783373,
+    "timestamp": 18336.10000000894,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 985.5816498973603,
+    "y": 265.76040083563817,
+    "timestamp": 18413.20000000298,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 957.0529574862351,
+    "y": 249.46518486883835,
+    "timestamp": 18496.79999999702,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 942.2418416563951,
+    "y": 235.7271627300957,
+    "timestamp": 18580.79999999702,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 892.072250823942,
+    "y": 189.6358400808635,
+    "timestamp": 18665.90000000596,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 883.5466574443,
+    "y": 178.56891440642855,
+    "timestamp": 18745.79999999702,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 838.9558838822825,
+    "y": 180.00375237672276,
+    "timestamp": 18835.70000000298,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 883.4874872578741,
+    "y": 181.9737364893947,
+    "timestamp": 18920.20000000298,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 937.0099009209874,
+    "y": 176.21076804602473,
+    "timestamp": 19009.29999999702,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 955.9550401435612,
+    "y": 162.27137434976225,
+    "timestamp": 19092.90000000596,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 990.9444588172018,
+    "y": 194.6548723957261,
+    "timestamp": 19172.79999999702,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 950.1556061775041,
+    "y": 200.76038592386567,
+    "timestamp": 19258.10000000894,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 856.8365866993472,
+    "y": 289.25124560499137,
+    "timestamp": 19338,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 822.1294657226456,
+    "y": 311.7459241349604,
+    "timestamp": 19416.20000000298,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 838.1408884316578,
+    "y": 304.5850109902431,
+    "timestamp": 19509.5,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 807.1421850753816,
+    "y": 312.31505107179584,
+    "timestamp": 19587,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 823.6303650292673,
+    "y": 278.3302209533641,
+    "timestamp": 19674.40000000596,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 791.8777003109591,
+    "y": 276.6978656863723,
+    "timestamp": 19754.5,
+    "nearestStimulusId": null,
+    "nearestStimulusColor": null,
+    "nearestPosition": null
+  },
+  {
+    "x": 846.6188084519753,
+    "y": 284.9747217901853,
+    "timestamp": 19842.79999999702,
+    "nearestStimulusId": 6,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 900.1775954249199,
+    "y": 305.4094817652232,
+    "timestamp": 19924,
+    "nearestStimulusId": 6,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 884.872482539396,
+    "y": 318.0120082958844,
+    "timestamp": 20014.40000000596,
+    "nearestStimulusId": 6,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 910.3402498037035,
+    "y": 335.9601030236294,
+    "timestamp": 20099.60000000894,
+    "nearestStimulusId": 6,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 941.2700839651326,
+    "y": 336.3473233330625,
+    "timestamp": 20180.70000000298,
+    "nearestStimulusId": 6,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 988.7741414223437,
+    "y": 330.5129716153525,
+    "timestamp": 20262.10000000894,
+    "nearestStimulusId": 6,
+    "nearestStimulusColor": "yellow",
+    "nearestPosition": "topo"
+  },
+  {
+    "x": 1025.6204020959608,
+    "y": 360.09156765315856,
+    "timestamp": 20352.20000000298,
+    "nearestStimulusId": 8,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 998.3421542551074,
+    "y": 393.5584274379548,
+    "timestamp": 20435.70000000298,
+    "nearestStimulusId": 8,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1016.1826937045907,
+    "y": 366.3174910075095,
+    "timestamp": 20520.90000000596,
+    "nearestStimulusId": 8,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1165.5550869910626,
+    "y": 298.04640273486325,
+    "timestamp": 20596.60000000894,
+    "nearestStimulusId": 8,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1293.9485669807189,
+    "y": 292.1479527129232,
+    "timestamp": 20681.20000000298,
+    "nearestStimulusId": 8,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1298.2957821155444,
+    "y": 302.5869274305267,
+    "timestamp": 20765.29999999702,
+    "nearestStimulusId": 8,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1311.7987374540253,
+    "y": 363.574459237218,
+    "timestamp": 20842.5,
+    "nearestStimulusId": 8,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1233.5834639651662,
+    "y": 389.53851297733445,
+    "timestamp": 20927.79999999702,
+    "nearestStimulusId": 8,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1194.0807129351776,
+    "y": 391.19645551632686,
+    "timestamp": 21012.60000000894,
+    "nearestStimulusId": 8,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1259.0596098186832,
+    "y": 438.87360798117214,
+    "timestamp": 21097.40000000596,
+    "nearestStimulusId": 8,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1233.266766850452,
+    "y": 403.8450158859632,
+    "timestamp": 21177.79999999702,
+    "nearestStimulusId": 8,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1181.7389526951447,
+    "y": 437.61170735498496,
+    "timestamp": 21264.20000000298,
+    "nearestStimulusId": 8,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1220.0644303437864,
+    "y": 430.7190271665349,
+    "timestamp": 21339.40000000596,
+    "nearestStimulusId": 8,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1188.2365401368722,
+    "y": 421.2646455774112,
+    "timestamp": 21423.79999999702,
+    "nearestStimulusId": 8,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1168.1423452136653,
+    "y": 445.5318341100973,
+    "timestamp": 21497.70000000298,
+    "nearestStimulusId": 8,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1141.94572990827,
+    "y": 462.6481505266709,
+    "timestamp": 21571.5,
+    "nearestStimulusId": 8,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1168.776132098635,
+    "y": 453.74134201969173,
+    "timestamp": 21665,
+    "nearestStimulusId": 8,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1209.1723932323175,
+    "y": 473.0801006358129,
+    "timestamp": 21757.10000000894,
+    "nearestStimulusId": 8,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1247.7344990636816,
+    "y": 441.36889538772823,
+    "timestamp": 21834.70000000298,
+    "nearestStimulusId": 8,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1326.1862461494634,
+    "y": 413.94799296760976,
+    "timestamp": 21913.60000000894,
+    "nearestStimulusId": 8,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1292.473339014372,
+    "y": 369.39898439971995,
+    "timestamp": 22002.60000000894,
+    "nearestStimulusId": 8,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1419.2827629037497,
+    "y": 306.08863386958296,
+    "timestamp": 22084.79999999702,
+    "nearestStimulusId": 8,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1596.319649450727,
+    "y": 256.60405373225996,
+    "timestamp": 22169.70000000298,
+    "nearestStimulusId": 8,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1717.5455116632754,
+    "y": 182.637984709752,
+    "timestamp": 22247.60000000894,
+    "nearestStimulusId": 8,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1846.4191237745572,
+    "y": 123.22632487778598,
+    "timestamp": 22328.5,
+    "nearestStimulusId": 8,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1838.7710718587794,
+    "y": 50.376912292045766,
+    "timestamp": 22411,
+    "nearestStimulusId": 8,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1885.3810325612933,
+    "y": 11.365186538225526,
+    "timestamp": 22479.5,
+    "nearestStimulusId": 8,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "baixo-direita"
+  },
+  {
+    "x": 1930.27055196802,
+    "y": -2.67503082409295,
+    "timestamp": 22557.70000000298,
+    "nearestStimulusId": 8,
+    "nearestStimulusColor": "magenta",
+    "nearestPosition": "baixo-direita"
+  }
+]
