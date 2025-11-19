@@ -5,6 +5,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import classification_report
+
 st.set_page_config(page_title="Eye Tracking com WebGazer", layout="wide")
 
 st.title("Experimento de Eye-Tracking com Estímulos Coloridos")
@@ -70,9 +75,15 @@ html_code = """
       padding: 0 10px;
       z-index: 10000;
       font-size: 14px;
+      gap: 8px;
     }
 
-    #downloadBtn {
+    #buttonsBox {
+      display: flex;
+      gap: 6px;
+    }
+
+    .topBtn {
       padding: 5px 10px;
       background: #28a745;
       border: none;
@@ -82,13 +93,37 @@ html_code = """
       font-size: 13px;
     }
 
-    #downloadBtn:hover {
+    .topBtn:hover {
       background: #218838;
     }
 
     #info {
       font-size: 12px;
       opacity: 0.8;
+      flex: 1;
+    }
+
+    #resultsPanel {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      max-height: 35%;
+      background: rgba(0,0,0,0.85);
+      padding: 10px;
+      font-size: 13px;
+      overflow-y: auto;
+      z-index: 9000;
+      border-top: 1px solid #333;
+    }
+
+    #resultsPanel h3, #resultsPanel h4 {
+      margin: 4px 0;
+    }
+
+    #resultsPanel ul {
+      margin: 2px 0 6px 16px;
+      padding: 0;
     }
   </style>
 </head>
@@ -99,7 +134,10 @@ html_code = """
       Olhe para os três círculos coloridos. Eles ficam 5 segundos visíveis em posições fixas (triângulo) e depois somem por 2 segundos antes do próximo teste.
       Clique em pontos da tela (olhando para eles) para ajudar na calibração.
     </div>
-    <button id="downloadBtn">Baixar dados em JSON</button>
+    <div id="buttonsBox">
+      <button class="topBtn" id="analyzeBtn">Ver análise atual</button>
+      <button class="topBtn" id="downloadBtn">Baixar JSON</button>
+    </div>
   </div>
 
   <div id="ponto"></div>
@@ -108,6 +146,9 @@ html_code = """
   <div class="stimulusCircle" id="circle0"></div>
   <div class="stimulusCircle" id="circle1"></div>
   <div class="stimulusCircle" id="circle2"></div>
+
+  <!-- Painel para exibir análise parcial -->
+  <div id="resultsPanel"></div>
 
   <script>
     // ==========================
@@ -126,16 +167,16 @@ html_code = """
 
     // offsets fixos em forma de triângulo em torno do centro (dx, dy)
     const TRIANGLE_OFFSETS = [
-      { dx: 0,    dy: -150 },  // topo
-      { dx: -130, dy:  75 },   // baixo-esquerda
-      { dx: 130,  dy:  75 }    // baixo-direita
+      { dx: 0,    dy: -150, label: "topo" },
+      { dx: -130, dy:  75,  label: "baixo-esquerda" },
+      { dx: 130,  dy:  75,  label: "baixo-direita" }
     ];
 
     // ==========================
     // VARIÁVEIS DE ESTADO
     // ==========================
 
-    let currentStimuli = [];   // [{id, color, x, y}, ...]
+    let currentStimuli = [];   // [{id, color, x, y, position}, ...]
     let stimulusIdCounter = 0;
     let gazeData = [];
     let stimuliVisible = false;
@@ -147,6 +188,8 @@ html_code = """
       document.getElementById('circle2'),
     ];
     const downloadBtn = document.getElementById('downloadBtn');
+    const analyzeBtn = document.getElementById('analyzeBtn');
+    const resultsPanel = document.getElementById('resultsPanel');
 
     // ==========================
     // FUNÇÕES AUXILIARES
@@ -187,6 +230,7 @@ html_code = """
           color: color,
           x: x,
           y: y,
+          position: offset.label,
           startTime: Date.now()
         });
       }
@@ -260,7 +304,8 @@ html_code = """
             y: gazeY,
             timestamp: timestamp || Date.now(),
             nearestStimulusId: nearest ? nearest.id : null,
-            nearestStimulusColor: nearest ? nearest.color : null
+            nearestStimulusColor: nearest ? nearest.color : null,
+            nearestPosition: nearest ? nearest.position : null
           });
         })
         .begin()
@@ -279,6 +324,62 @@ html_code = """
 
     // iniciar assim que possível
     startExperiment();
+
+    // ==========================
+    // ANÁLISE PARCIAL NO BOTÃO
+    // ==========================
+
+    analyzeBtn.addEventListener('click', function() {
+      if (!gazeData || gazeData.length === 0) {
+        resultsPanel.innerHTML = "<p>Nenhuma amostra registrada ainda. Aguarde alguns segundos de experimento.</p>";
+        return;
+      }
+
+      // Considerar apenas amostras com alvo definido
+      const valid = gazeData.filter(s => s.nearestStimulusColor !== null && s.nearestPosition !== null);
+
+      if (valid.length === 0) {
+        resultsPanel.innerHTML = "<p>Ainda não há amostras com estímulos visíveis associados.</p>";
+        return;
+      }
+
+      const total = valid.length;
+
+      const byColor = {};
+      const byPos = {};
+
+      for (const s of valid) {
+        const c = s.nearestStimulusColor;
+        const p = s.nearestPosition;
+
+        if (!byColor[c]) byColor[c] = 0;
+        byColor[c]++;
+
+        if (!byPos[p]) byPos[p] = 0;
+        byPos[p]++;
+      }
+
+      let html = "<h3>Resumo parcial do experimento</h3>";
+      html += `<p>Total de amostras com alvo associado: <strong>${total}</strong></p>`;
+
+      html += "<h4>Atenção por cor</h4><ul>";
+      for (const c in byColor) {
+        const n = byColor[c];
+        const perc = (n / total * 100).toFixed(1);
+        html += `<li><strong>${c}</strong>: ${n} amostras (${perc}%)</li>`;
+      }
+      html += "</ul>";
+
+      html += "<h4>Atenção por posição do triângulo</h4><ul>";
+      for (const p in byPos) {
+        const n = byPos[p];
+        const perc = (n / total * 100).toFixed(1);
+        html += `<li><strong>${p}</strong>: ${n} amostras (${perc}%)</li>`;
+      }
+      html += "</ul>";
+
+      resultsPanel.innerHTML = html;
+    });
 
     // ==========================
     // DOWNLOAD DOS DADOS EM JSON
@@ -300,147 +401,255 @@ html_code = """
 </html>
 """
 
-components.html(html_code, height=800)
+# -------------------------------------------------------------------
+# TABS
+# -------------------------------------------------------------------
+tab_exp, tab_analise, tab_ia = st.tabs(["🧪 Experimento", "📊 Análise dos dados", "🤖 Análise com IA"])
 
-st.markdown("---")
-st.header("Análise dos dados (opcional)")
+# ==========================
+# TAB 1 – EXPERIMENTO
+# ==========================
+with tab_exp:
+    st.subheader("Execução do experimento (WebGazer)")
+    st.write("""
+    - Ajuste a posição do rosto para que o rastreamento funcione bem.  
+    - Observe os três círculos coloridos a cada ciclo.  
+    - Use o botão **Baixar JSON** na barra superior da tela do experimento
+      para salvar os dados em um arquivo.
+    """)
+    components.html(html_code, height=800)
 
-st.write("Depois de rodar o experimento e baixar o arquivo `gaze_data_experimento.json`, envie-o abaixo para analisar os resultados.")
+# ==========================
+# TAB 2 – ANÁLISE DOS DADOS
+# ==========================
+with tab_analise:
+    st.subheader("Upload e análise básica dos dados")
+    st.write("Após rodar o experimento e baixar o arquivo `gaze_data_experimento.json`, envie-o abaixo.")
 
-uploaded_file = st.file_uploader("Envie o arquivo JSON gerado pelo experimento", type=["json"])
+    uploaded_file = st.file_uploader("Envie o arquivo JSON gerado pelo experimento", type=["json"], key="file_analise")
 
-# ===========================================================
-# 1. CARREGAR O JSON
-# ===========================================================
+    if uploaded_file is not None:
+        try:
+            data = json.load(uploaded_file)
+        except Exception as e:
+            st.error(f"Erro ao ler o JSON: {e}")
+            st.stop()
 
-ARQUIVO_JSON = "gaze_data_experimento.json"
+        if not data:
+            st.error("O arquivo JSON está vazio. Rode o experimento novamente e baixe um novo arquivo.")
+            st.stop()
 
-with open(ARQUIVO_JSON, "r", encoding="utf-8") as f:
-    data = json.load(f)
+        df = pd.DataFrame(data)
+        
+        st.write("Pré-visualização das primeiras amostras:")
+        st.dataframe(df.head())
+        st.write("Colunas encontradas:", list(df.columns))
 
-if not data:
-    raise ValueError("O arquivo JSON está vazio. Rode o experimento e baixe um novo arquivo.")
+        # ----- LIMPEZA BÁSICA -----
+        for col in ["x", "y", "timestamp"]:
+            if col in df.columns:
+                df[col] = pd.to_numeric(df[col], errors="coerce")
 
-df = pd.DataFrame(data)
-print("Primeiras linhas do DataFrame:")
-print(df.head())
-print("\nColunas:", df.columns.tolist())
+        # Reconstruir nearestPosition se não existir (a partir do padrão do triângulo)
+        if "nearestPosition" not in df.columns and "nearestStimulusId" in df.columns:
+            st.info("Coluna 'nearestPosition' não encontrada. Reconstruindo a partir de 'nearestStimulusId' (mod 3).")
 
-# ===========================================================
-# 2. LIMPEZA BÁSICA E FILTRO
-# ===========================================================
+            def map_pos_from_id(id_):
+                try:
+                    r = int(id_) % 3
+                except (TypeError, ValueError):
+                    return None
+                if r == 0:
+                    return "topo"
+                elif r == 1:
+                    return "baixo-esquerda"
+                else:
+                    return "baixo-direita"
 
-# Garante tipos numéricos
-for col in ["x", "y", "timestamp"]:
-    if col in df.columns:
-        df[col] = pd.to_numeric(df[col], errors="coerce")
+            df["nearestPosition"] = df["nearestStimulusId"].apply(map_pos_from_id)
 
-# Mantém apenas linhas com associação a algum estímulo
-df_valid = df.dropna(subset=["nearestStimulusId", "nearestStimulusColor", "timestamp"]).copy()
-df_valid["nearestStimulusId"] = df_valid["nearestStimulusId"].astype(int)
+        required_cols = ["nearestStimulusColor", "timestamp"]
+        if "nearestPosition" in df.columns:
+            required_cols.append("nearestPosition")
 
-print(f"\nTotal de amostras válidas (com estímulo associado): {len(df_valid)}")
+        missing = [c for c in required_cols if c not in df.columns]
+        if missing:
+            st.error(
+                f"As seguintes colunas necessárias não estão no JSON: {missing}. "
+                "Verifique se o experimento rodou na versão mais recente do HTML."
+            )
+            st.stop()
 
-if len(df_valid) == 0:
-    raise ValueError("Nenhuma amostra válida encontrada (nearestStimulusId/Color está sempre nulo). Verifique se o experimento rodou corretamente.")
+        df_valid = df.dropna(subset=required_cols).copy()
+        st.write(f"Total de amostras válidas (com estímulo associado): **{len(df_valid)}**")
 
-# ===========================================================
-# 3. ESTIMAR INTERVALO MÉDIO ENTRE AMOSTRAS
-# ===========================================================
+        if len(df_valid) == 0:
+            st.error("Nenhuma amostra válida encontrada com estímulo associado.")
+            st.stop()
 
-# Ordena por tempo e calcula diferença entre timestamps
-df_sorted = df_valid.sort_values("timestamp")
-dt = df_sorted["timestamp"].diff()
-dt_medio_ms = dt.dropna().mean()
+        # ----- ATENÇÃO POR COR -----
+        st.markdown("### Atenção por cor")
 
-if pd.isna(dt_medio_ms) or dt_medio_ms <= 0:
-    dt_medio_ms = 30.0  # fallback padrão
-    print("\nNão foi possível estimar dt médio. Usando 30 ms como valor aproximado.")
-else:
-    print(f"\nIntervalo médio estimado entre amostras: {dt_medio_ms:.2f} ms")
+        samples_by_color = df_valid.groupby("nearestStimulusColor")["timestamp"].count()
+        st.write("Número de amostras por cor:")
+        st.write(samples_by_color)
 
-# ===========================================================
-# 4. ATENÇÃO POR COR
-# ===========================================================
+        # Estimativa de dt médio
+        df_sorted = df_valid.sort_values("timestamp")
+        dt = df_sorted["timestamp"].diff().dropna()
+        dt_medio_ms = dt.mean() if not dt.empty else 30.0
+        dt_medio_s = dt_medio_ms / 1000.0
+        st.write(f"Intervalo médio estimado entre amostras: **{dt_medio_ms:.2f} ms**")
 
-samples_by_color = df_valid.groupby("nearestStimulusColor")["timestamp"].count()
-attention_time_color_s = samples_by_color * dt_medio_ms / 1000.0
+        attention_time_color_s = samples_by_color * dt_medio_s
+        st.write("Tempo estimado de atenção por cor (segundos):")
+        st.write(attention_time_color_s)
 
-print("\nNúmero de amostras por cor (nearestStimulusColor):")
-print(samples_by_color)
+        # ----- ATENÇÃO POR POSIÇÃO -----
+        if "nearestPosition" in df_valid.columns:
+            st.markdown("### Atenção por posição do triângulo")
 
-print("\nTempo estimado de atenção por cor (segundos):")
-print(attention_time_color_s)
+            samples_by_pos = df_valid.groupby("nearestPosition")["timestamp"].count()
+            attention_time_pos_s = samples_by_pos * dt_medio_s
 
-# ===========================================================
-# 5. ATENÇÃO POR POSIÇÃO (TOPO / BAIXO-ESQ / BAIXO-DIR)
-# ===========================================================
+            st.write("Número de amostras por posição:")
+            st.write(samples_by_pos)
 
-# Mapeia o padrão dos IDs para posição no triângulo
-# Como você cria 3 estímulos por "rodada", o padrão dos ids é:
-# 0,1,2  -> rodada 1
-# 3,4,5  -> rodada 2
-# ...
-# Então: id % 3 -> 0 = topo, 1 = baixo-esq, 2 = baixo-dir
+            st.write("Tempo estimado de atenção por posição (segundos):")
+            st.write(attention_time_pos_s)
 
-def map_pos(id_):
-    r = id_ % 3
-    if r == 0:
-        return "topo"
-    elif r == 1:
-        return "baixo-esquerda"
-    else:
-        return "baixo-direita"
+# ==========================
+# TAB 3 – ANÁLISE COM IA
+# ==========================
+with tab_ia:
+    st.subheader("Classificação de alta/baixa atenção (IA)")
 
-df_valid["posicaoTriangulo"] = df_valid["nearestStimulusId"].apply(map_pos)
+    st.write("""
+    Esta aba utiliza **scikit-learn** para:
+    - agregar os dados por **cor + posição**;  
+    - estimar o **tempo de atenção** em cada combinação;  
+    - rotular automaticamente como **alta atenção** ou **baixa atenção**, usando a mediana como limiar;  
+    - treinar um modelo **RandomForestClassifier** para prever essa classificação.
+    """)
 
-samples_by_pos = df_valid.groupby("posicaoTriangulo")["timestamp"].count()
-attention_time_pos_s = samples_by_pos * dt_medio_ms / 1000.0
+    uploaded_file_ia = st.file_uploader(
+        "Envie novamente o JSON (ou o mesmo usado na aba anterior) para análise com IA:",
+        type=["json"],
+        key="file_ia",
+    )
 
-print("\nNúmero de amostras por posição do triângulo:")
-print(samples_by_pos)
+    if uploaded_file_ia is not None:
+        try:
+            data_ia = json.load(uploaded_file_ia)
+        except Exception as e:
+            st.error(f"Erro ao ler o JSON: {e}")
+            st.stop()
 
-print("\nTempo estimado de atenção por posição do triângulo (segundos):")
-print(attention_time_pos_s)
+        if not data_ia:
+            st.error("O arquivo JSON está vazio.")
+            st.stop()
 
-# ===========================================================
-# 6. TABELA RESUMO (COR x POSIÇÃO)
-# ===========================================================
+        df_ia = pd.DataFrame(data_ia)
 
-tabela_cor_pos = (
-    df_valid
-    .groupby(["nearestStimulusColor", "posicaoTriangulo"])["timestamp"]
-    .count()
-    .unstack(fill_value=0)
-)
+        # Conversão numérica
+        for col in ["x", "y", "timestamp"]:
+            if col in df_ia.columns:
+                df_ia[col] = pd.to_numeric(df_ia[col], errors="coerce")
 
-print("\nTabela (nº de amostras) por COR x POSIÇÃO:")
-print(tabela_cor_pos)
+        # Reconstruir nearestPosition, se faltar
+        if "nearestPosition" not in df_ia.columns and "nearestStimulusId" in df_ia.columns:
+            def map_pos_from_id_ia(id_):
+                try:
+                    r = int(id_) % 3
+                except (TypeError, ValueError):
+                    return None
+                if r == 0:
+                    return "topo"
+                elif r == 1:
+                    return "baixo-esquerda"
+                else:
+                    return "baixo-direita"
 
-# ===========================================================
-# 7. GRÁFICOS COM MATPLOTLIB
-# ===========================================================
+            df_ia["nearestPosition"] = df_ia["nearestStimulusId"].apply(map_pos_from_id_ia)
 
-# Se quiser ver gráficos, mude para True
-FAZER_GRAFICOS = False
+        required_cols_ia = ["nearestStimulusColor", "nearestPosition", "timestamp"]
+        missing_ia = [c for c in required_cols_ia if c not in df_ia.columns]
+        if missing_ia:
+            st.error(
+                f"As seguintes colunas necessárias não estão no JSON: {missing_ia}. "
+                "Verifique se o experimento rodou na versão correta."
+            )
+            st.stop()
 
-if FAZER_GRAFICOS:
-    import matplotlib.pyplot as plt
+        df_ia_valid = df_ia.dropna(subset=required_cols_ia).copy()
+        if len(df_ia_valid) == 0:
+            st.error("Nenhuma amostra válida encontrada para IA.")
+            st.stop()
 
-    # Gráfico de barras - tempo de atenção por cor
-    plt.figure()
-    attention_time_color_s.sort_values(ascending=False).plot(kind="bar")
-    plt.title("Tempo estimado de atenção por cor")
-    plt.xlabel("Cor")
-    plt.ylabel("Tempo (s)")
-    plt.tight_layout()
+        # Estima dt médio
+        df_ia_sorted = df_ia_valid.sort_values("timestamp")
+        dt_ia = df_ia_sorted["timestamp"].diff().dropna()
+        dt_medio_ms_ia = dt_ia.mean() if not dt_ia.empty else 30.0
+        dt_medio_s_ia = dt_medio_ms_ia / 1000.0
 
-    # Gráfico de barras - tempo de atenção por posição
-    plt.figure()
-    attention_time_pos_s.sort_values(ascending=False).plot(kind("bar"))
-    plt.title("Tempo estimado de atenção por posição do triângulo")
-    plt.xlabel("Posição")
-    plt.ylabel("Tempo (s)")
-    plt.tight_layout()
+        st.write(f"Intervalo médio estimado entre amostras: **{dt_medio_ms_ia:.2f} ms**")
 
-    plt.show()
+        # Agregar por cor + posição
+        group_cols = ["nearestStimulusColor", "nearestPosition"]
+        agg = (
+            df_ia_valid.groupby(group_cols)["timestamp"]
+            .count()
+            .reset_index(name="num_samples")
+        )
+
+        agg["tempo_atencao_s"] = agg["num_samples"] * dt_medio_s_ia
+
+        st.markdown("### Tabela agregada por cor + posição")
+        st.dataframe(agg)
+
+        if len(agg) < 2:
+            st.warning("Poucos pontos agregados para treinar um modelo de IA de forma significativa.")
+            st.stop()
+
+        # Definir rótulo de alta atenção (>= mediana)
+        limiar = agg["tempo_atencao_s"].median()
+        agg["alta_atencao"] = (agg["tempo_atencao_s"] >= limiar).astype(int)
+
+        st.write(f"Limiar de alta atenção (mediana do tempo): **{limiar:.2f} s**")
+        st.write("Tabela com rótulo de alta atenção (1) / baixa atenção (0):")
+        st.dataframe(agg[["nearestStimulusColor", "nearestPosition", "tempo_atencao_s", "alta_atencao"]])
+
+        # Preparar features e rótulos
+        X_cat = agg[["nearestStimulusColor", "nearestPosition"]]
+        y = agg["alta_atencao"]
+
+        # One-hot encoding
+        enc = OneHotEncoder(sparse_output=False)
+        X_encoded = enc.fit_transform(X_cat)
+
+        # Garantir tamanho mínimo pro train_test_split
+        if len(agg) < 4:
+            st.warning("Poucos exemplos agregados para uma divisão treino/teste robusta. O modelo será treinado e avaliado sobre os mesmos dados (apenas demonstração).")
+
+            clf = RandomForestClassifier(n_estimators=100, random_state=42)
+            clf.fit(X_encoded, y)
+            y_pred = clf.predict(X_encoded)
+
+            report = classification_report(y, y_pred)
+            st.markdown("### Relatório de classificação (treino = teste)")
+            st.text(report)
+
+        else:
+            X_train, X_test, y_train, y_test = train_test_split(
+                X_encoded, y, test_size=0.3, random_state=42
+            )
+
+            clf = RandomForestClassifier(n_estimators=100, random_state=42)
+            clf.fit(X_train, y_train)
+            y_pred = clf.predict(X_test)
+
+            report = classification_report(y_test, y_pred)
+            st.markdown("### Relatório de classificação (IA)")
+            st.text(report)
+
+        st.success("Análise com IA concluída.")
