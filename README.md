@@ -19,14 +19,13 @@ O experimento apresenta três círculos coloridos fixos nas posições de um tri
 - O WebGazer registra continuamente a posição do olhar  
 
 Cada amostra coletada é associada ao estímulo mais próximo e salva contendo:
-
 - Coordenadas do olhar (x, y)  
 - Cor do estímulo mais próximo  
 - Posição do estímulo (topo / baixo-esquerda / baixo-direita)  
 - Timestamp  
-- ID do estímulo  
+- ID do estímulo
 
-Esses dados podem ser baixados em JSON e analisados diretamente no Streamlit.
+> O dataset do projeto é gerado durante execução, podendo ser baixado na opção ``Baixar JSON``.
 
 ### Vídeo
 O vídeo explicativo do projeto pode ser encontrado em <a href="https://youtu.be/nhFCPyoFcq8">vídeo</a>
@@ -50,7 +49,6 @@ O fluxo do experimento é:
 5. A cada frame, o sistema captura a estimativa do olhar e associa ao círculo mais próximo.  
 
 ---
-
 
 ## Dependências Necessárias
 
