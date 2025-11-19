@@ -1,6 +1,11 @@
 # Proj_IA-Eye-Tracking  
 Sistema de rastreamento ocular com WebGazer.js, Streamlit e análise com IA.
 
+## Autores
+- Arthur Cezar da Silveira Lima RA 10409172
+- Gabriel Morgado Nogueira RA 10409493
+- Guillermo Kuznietz RA 10410134
+
 ---
 
 ## Visão Geral do Projeto
