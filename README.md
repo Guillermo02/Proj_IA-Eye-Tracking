@@ -189,14 +189,3 @@ Para cada gaze `(x, y)`:
 
 **YU, C. H.**  
 *An Eye-Tracking Study: Investigating the Impact of Website Theme Colors on Viewer Engagement.* Dean & Francis Press, 2023.
-
----
-
-## Possíveis Extensões do Projeto
-
-- Heatmap do olhar  
-- Exportação automática dos resultados em PDF  
-- Comparação entre múltiplos participantes  
-- Pipeline completo para estudos de UX  
-- Modelos de IA mais complexos (SVM, Gradient Boosting)  
-- Dashboard avançado com Plotly  
