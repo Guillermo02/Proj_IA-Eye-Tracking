@@ -1,95 +1,196 @@
-# Proj_IA-Eye-Tracking
+# Proj_IA-Eye-Tracking  
+Sistema de rastreamento ocular com WebGazer.js, Streamlit e análise com IA.
 
-## 1. Introdução
+---
 
-O rastreamento ocular (eye-tracking) é uma ferramenta fundamental para compreender como usuários distribuem sua atenção visual diante de diferentes estímulos. Elementos como cor, contraste, posição e organização espacial influenciam significativamente o que tende a atrair o olhar humano. Bylinskii et al. (2015) demonstram que características intrínsecas e extrínsecas das imagens afetam diretamente sua memorabilidade, enquanto Țichindelean et al. (2021) evidenciam que técnicas de eye-tracking auxiliam na avaliação da usabilidade em interfaces digitais.
+## Visão Geral do Projeto
 
-Neste contexto, este projeto investiga qual cor e qual posição espacial tendem a receber mais atenção quando apresentadas simultaneamente ao usuário. Para isso, utiliza-se um experimento simples baseado em estímulos circulares coloridos, registrados pelo sistema WebGazer.
+Este projeto implementa um experimento de **eye-tracking** baseado em webcam utilizando o **WebGazer.js** integrado ao **Streamlit**, permitindo analisar como usuários distribuem sua atenção entre diferentes estímulos coloridos exibidos na tela.
 
-## 2. Referencial Teórico
+O experimento apresenta três círculos coloridos fixos nas posições de um triângulo. Cada ciclo funciona assim:
 
-Diversas pesquisas ao longo dos últimos anos têm explorado a relação entre atenção visual e características dos estímulos apresentados:
+- **5 segundos** → os círculos aparecem com cores aleatórias  
+- **2 segundos** → todos desaparecem para “resetar” a visão  
+- O WebGazer registra continuamente a posição do olhar  
 
-Memorabilidade e atenção visual: Segundo Bylinskii et al. (2015), elementos com maior contraste visual, organização clara e cores marcantes apresentam maior probabilidade de atrair e manter a atenção, contribuindo para sua memorabilidade.
+Cada amostra coletada é associada ao estímulo mais próximo e salva contendo:
 
-Influência das cores no engajamento: Yu (2023) demonstra que diferentes esquemas de cores alteram significativamente o engajamento do usuário com interfaces digitais, reforçando o papel psicológico e perceptivo das cores.
+- Coordenadas do olhar (x, y)  
+- Cor do estímulo mais próximo  
+- Posição do estímulo (topo / baixo-esquerda / baixo-direita)  
+- Timestamp  
+- ID do estímulo  
 
-Usabilidade e eye-tracking: Țichindelean et al. (2021) analisam como padrões de fixação e movimentos oculares podem indicar problemas ou pontos fortes de usabilidade em layouts visuais.
+Esses dados podem ser baixados em JSON e analisados diretamente no Streamlit.
 
-Com base nesses estudos, este projeto usa cores simples e posições espaciais bem definidas (triângulo equilátero fixo) para isolar variáveis e observar padrões básicos de atenção.
+O vídeo explicativo do projeto pode ser encontrado em ``https://youtu.be/nhFCPyoFcq8``
 
-## 3. Metodologia
+---
 
-A metodologia consiste em três etapas principais:
+## Funcionamento do Experimento
 
-### 3.1. Ambiente do Experimento
+A interface do experimento combina:
 
-O experimento foi implementado utilizando Streamlit e WebGazer.js, que permite rastrear a posição do olhar via webcam sem necessidade de hardware especializado.
+- **WebGazer.js** — rastreamento ocular via webcam  
+- **HTML, CSS e JavaScript** — exibidos dentro do Streamlit  
+- **Python + Streamlit** — controle de interface e análise dos dados  
 
-Três círculos coloridos são exibidos simultaneamente em posições fixas que formam um triângulo em torno do centro da tela.
+O fluxo do experimento é:
 
-### 3.2. Ciclo do Estímulo
+1. O usuário encara a tela; o WebGazer calibra com cliques do mouse na posição que estiver olhando na tela.  
+2. Três círculos coloridos surgem formando um triângulo centralizado.  
+3. Após 5 segundos, desaparecem por 2 segundos.  
+4. A cada ciclo novas cores são sorteadas.  
+5. A cada frame, o sistema captura a estimativa do olhar e associa ao círculo mais próximo.  
 
-Cada ciclo é composto por:
+---
 
-Exibição dos círculos (5 segundos)
 
-Três círculos aparecem em posições fixas:
+## Dependências Necessárias
 
-Topo; Baixo-esquerda; Baixo-direita
+ Versão recomendada de Python:
+- Python 3.12
 
-Cada círculo recebe uma cor aleatória e distinta dentre um conjunto pré-definido.
+ Bibliotecas utilizadas (Python):
+- streamlit  
+- pandas  
+- numpy  
+- scikit-learn  
 
-Período em branco (2 segundos)
+Instalação:
 
-Os círculos desaparecem temporariamente para permitir “reset” perceptivo.
+pip install streamlit pandas numpy scikit-learn
 
-Novo ciclo
+> Se quiser garantir que seja instalado usando a versão do python atual, use o comando:
 
-O processo se repete com novas cores, gerando novas oportunidades de coleta.
+``python -m pip install scikit-learn streamlit pandas matplotlib``
 
-### 3.3. Coleta dos Dados
 
-A cada amostra coletada, WebGazer registra:
 
-- Coordenadas do olhar (x, y)
-- Timestamp
-- Círculo mais próximo no instante (nearestStimulusId)
-- Cor associada (nearestStimulusColor)
+### Dependências Web (via CDN):
 
-Os dados ficam acessíveis via botão “Baixar dados em JSON”.
+- WebGazer.js  
+- clmtrackr  
 
-### 3.4. Análise dos Dados
+Essas já estão incluídas no HTML dentro da aplicação.
 
-Um script em Python processa o arquivo JSON e calcula:
+---
 
-- Tempo estimado de atenção por cor
-- Tempo de fixação por posição do triângulo
-- Contagem de amostras por cor e posição
-- Tabela cruzada COR × POSIÇÃO
-- Estimativa do intervalo médio entre amostras
+## Como Executar o Projeto
 
-Opcionalmente, gráficos podem ser gerados com matplotlib.
+### 1. Criar ambiente virtual (opcional porém recomendado)
+  python -m venv venv
+  
+### 1.1 Ativar o ambiente virtual
+  
+Windows: venv\Scripts\activate
 
-## 4. Resultados Esperados
 
-Com base no referencial teórico e na configuração do experimento, espera-se:
+### 2. Instalar dependências
 
-- Identificar quais cores atraem mais a atenção do usuário.
-- Verificar se existe preferência por certas regiões espaciais (ex.: topo > esquerda > direita).
-- Observar padrões de retorno do olhar durante o período de exibição.
-- Possibilidade de agrupar comportamentos similares entre usuários.
+pip install streamlit pandas numpy scikit-learn
 
-Embora simples, esse experimento pode fornecer insights valiosos sobre percepção visual, ergonomia, design de interfaces e psicologia das cores.
+ou
 
-## 5. Conclusão
+python -m pip install scikit-learn streamlit pandas matplotlib
 
-O projeto demonstra como é possível conduzir um experimento de eye-tracking funcional apenas com tecnologias acessíveis (WebGazer + Streamlit), sem a necessidade de equipamentos especializados. Através da análise dos dados coletados, é possível compreender padrões fundamentais de atenção visual, contribuindo tanto para estudos acadêmicos quanto para aplicações práticas em design, usabilidade, marketing e acessibilidade.
 
-## 6. Referências Bibliográficas
+### 3. Rodar o Streamlit
 
-BYLINSKII, Zoya; ISOLA, Phillip; BAINBRIDGE, Constance; TORRALBA, Antonio; OLIVA, Aude. Intrinsic and Extrinsic Effects on Image Memorability. Vision Research, v. 116, p. 165-178, 2015.
+streamlit run app.py
 
-YU, Chao Hsuan. An Eye-tracking Study: Investigating the Impact of Website Theme Colors on Viewer Engagement. Dean & Francis Press, 2023. Disponível em: https://doi.org/10.61173/4fhyq880
 
-ȚICHINDELEAN, M.; ȚICHINDELEAN, M. T.; CETINĂ, I.; ORZAN, G. A Comparative Eye Tracking Study of Usability—Towards Sustainable Web Design. Sustainability, v. 13, n. 10, p. 10415, 2021. DOI: https://doi.org/10.3390/su131810415
+Seu navegador abrirá automaticamente em: http://localhost:8501
+
+
+---
+
+## Análises Disponíveis no Streamlit
+
+O aplicativo é dividido em abas:
+
+### Aba 1 — Experimento
+
+- Exibe o HTML com WebGazer.js  
+- Usuário realiza o teste visual
+- Botão "Ver Análise Atual" mostra uma analise simples do teste até o momento
+- Botão “Baixar JSON” salva os dados coletados  
+
+### Aba 2 — Análise Dos Dados
+
+Permite:
+- Carregar o arquivo JSON gerado  
+- Ver as primeiras amostras  
+- Ver colunas detectadas  
+- Ver atenção:
+  - Por cor  
+  - Por posição (topo / baixo-esquerda / baixo-direita)  
+- Ver tempo estimado de fixação 
+
+Inclui também:
+- Estimativa do intervalo médio entre amostras (`dt`)  
+- Cálculo do tempo total de atenção por categoria  
+
+### Aba 3 — Análise com IA (scikit-learn)
+
+Processo executado:
+1. Agrega dados por **cor + posição**  
+2. Estima o tempo total de atenção por combinação  
+3. Define automaticamente o limiar de “alta atenção” (mediana)  
+4. Constrói dataset rotulado  
+5. Codifica as variáveis categóricas (`OneHotEncoder`)  
+6. Treina um modelo:
+   - **RandomForestClassifier**  
+7. Exibe:
+   - Tabela completa agregada  
+   - Limiar usado  
+   - Relatório de classificação (`classification_report`)  
+
+Essa aba mostra como IA pode auxiliar na interpretação de comportamento visual.
+
+---
+
+## Detalhes Técnicos da Análise
+
+### Cálculo do tempo de atenção
+
+1. Ordena timestamps  
+2. Calcula diferença média entre amostras (`dt`)  
+3. Multiplica número de amostras por `dt` para obter tempo aproximado  
+
+### Associação com estímulo mais próximo
+
+Para cada gaze `(x, y)`:
+
+- Calcula distância para cada círculo  
+- Seleciona o mais próximo  
+- Salva cor, posição e ID  
+
+### Rótulo de atenção (IA)
+
+`tempo_atencao >= mediana → alta atenção (1)`  
+`tempo_atencao < mediana → baixa atenção (0)`
+
+---
+
+## Referências Bibliográficas
+
+**BYLINSKII, Z.; ISOLA, P.; BAINBRIDGE, C.; TORRALBA, A.; OLIVA, A.**  
+*Intrinsic and Extrinsic Effects on Image Memorability.* Vision Research, v. 116, p. 165–178, 2015.
+
+**ȚICHINDELEAN, M.; ȚICHINDELEAN, M. T.; CETINĂ, I.; ORZAN, G.**  
+*A Comparative Eye Tracking Study of Usability — Towards Sustainable Web Design.* Sustainability, v. 13, p. 10415, 2021.
+
+**YU, C. H.**  
+*An Eye-Tracking Study: Investigating the Impact of Website Theme Colors on Viewer Engagement.* Dean & Francis Press, 2023.
+
+---
+
+## Possíveis Extensões do Projeto
+
+- Heatmap do olhar  
+- Exportação automática dos resultados em PDF  
+- Comparação entre múltiplos participantes  
+- Pipeline completo para estudos de UX  
+- Modelos de IA mais complexos (SVM, Gradient Boosting)  
+- Dashboard avançado com Plotly  
