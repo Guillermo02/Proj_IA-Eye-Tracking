@@ -1,5 +1,10 @@
 # Proj_IA-Eye-Tracking
 
+## Autores
+- Arthur Cezar da Silveira Lima RA 10409172
+- Gabriel Morgado Nogueira      RA 10409493
+- Guillermo Kuznietz            RA 10410134
+
 ## 1. Introdução
 
 O rastreamento ocular (eye-tracking) é uma ferramenta fundamental para compreender como usuários distribuem sua atenção visual diante de diferentes estímulos. Elementos como cor, contraste, posição e organização espacial influenciam significativamente o que tende a atrair o olhar humano. Bylinskii et al. (2015) demonstram que características intrínsecas e extrínsecas das imagens afetam diretamente sua memorabilidade, enquanto Țichindelean et al. (2021) evidenciam que técnicas de eye-tracking auxiliam na avaliação da usabilidade em interfaces digitais.
